@@ -49,4 +49,5 @@ body {
   box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
   cursor: crosshair;
   outline: none;
+  width:100%;
 }
