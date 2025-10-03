@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive SVG Drawing Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="drawing-tool-app">
+        <h1>SVG Drawing Tool</h1>
+        <div class="canvas-controls">
+            <button onclick="undo()" id="undo-btn">Undo</button>
+        </div>
+        <svg id="canvas" width="500" height="400" tabindex="0" aria-label="Drawing Canvas"></svg>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
