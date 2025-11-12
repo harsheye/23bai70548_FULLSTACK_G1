@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banking Interface</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bank-container">
+    <h2>Bank Account</h2>
+    <div class="balance">
+      Current Balance: ₹<span id="balance">0</span>
+    </div>
+
+    <div class="transaction">
+      <input type="number" id="amount" placeholder="Enter amount">
+      <div class="buttons">
+        <button onclick="deposit()">Deposit</button>
+        <button onclick="withdraw()">Withdraw</button>
+      </div>
+    </div>
+
+    <div id="message" class="message"></div>
+  </div>
+  <div class="summary">
+  <p>Total Deposited: ₹<span id="totalDeposit">0</span></p>
+  <p>Total Withdrawn: ₹<span id="totalWithdraw">0</span></p>
+</div>
+
+  
+
+<div class="table">
+  <table id="historyTable">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Amount (₹)</th>
+        <th>Balance (₹)</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
