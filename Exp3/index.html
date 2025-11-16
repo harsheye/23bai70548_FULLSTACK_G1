@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Product Filter with DOM Manipulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="product-filter-app">
+    <h1>Dynamic Product Filter</h1>
+
+    <section class="filter-section">
+      <label for="filter"><strong>Filter Products:</strong></label>
+      <select id="filter">
+        <option value="all">All Products</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+      </select>
+    </section>
+
+    <section id="products-container" class="products-list"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

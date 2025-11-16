@@ -1,0 +1,58 @@
+.library-container { 
+  border: 1px solid black; 
+  padding: 20px; 
+  margin: 20px; 
+  width: 500px; 
+  } 
+  .library-title { 
+  font-size: 24px; 
+  margin-bottom: 15px; 
+  color:black
+  } 
+  .search-input { 
+  width: 95%; 
+  padding: 10px; 
+  margin-bottom: 20px; 
+  font-size: 16px; 
+  } 
+  .add-book-form { 
+  display: flex;
+  gap: 10px; 
+  margin-bottom: 20px; 
+} 
+ 
+.input-field { 
+  padding: 10px; 
+  font-size: 14px; 
+  width: 150px; 
+} 
+ 
+.add-button { 
+  padding: 10px 15px; 
+  font-size: 14px; 
+  cursor: pointer; 
+  color:black;
+  background-color: white;
+  border: 1px solid black;
+} 
+ 
+.book-item { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: #f9f9f9; 
+  padding: 10px; 
+  margin-bottom: 10px; 
+  border-radius: 4px; 
+  border: 1px solid #ddd; 
+  color: black;
+} 
+ 
+.remove-button { 
+  padding: 6px 10px; 
+  font-size: 12px; 
+  cursor: pointer;
+  color:black;
+  background-color: white;
+  border: 1px solid black;
+}
