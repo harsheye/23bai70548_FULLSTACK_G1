@@ -41,9 +41,9 @@ export default function WaterTracker() {
 
   return (
     <div style={{maxWidth:400,margin:'2rem auto',padding:'1rem',border:'1px solid #ccc',borderRadius:8}}>
-      <nav style={{marginBottom:'1rem'}}>
-        <a href="/dashboard">Dashboard</a> | <a href="/dashboard/water">Water Tracker</a> | <a href="/logout">Logout</a>
-      </nav>
+      <p>
+        
+      </p>
       <CounterDisplay count={count} goal={goal} />
       <div style={{margin:'1rem 0'}}>
         <button onClick={increment}>+</button>

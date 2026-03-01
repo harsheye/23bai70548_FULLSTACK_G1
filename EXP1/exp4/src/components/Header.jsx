@@ -21,6 +21,10 @@ const Header = () => {
           Logs
         </Button>
 
+        <Button color="inherit" component={Link} to="/dashboard/water">
+          Water Tracker
+        </Button>
+
         {isAuthenticated ? (
           <Button color="inherit" component={Link} to="/logout">
             Logout
