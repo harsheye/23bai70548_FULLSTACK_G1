@@ -18,7 +18,7 @@ export default function HealthTip() {
       });
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div>Loading health tip...</div>;
   if (error) return <div>{error}</div>;
   return <div>Today's Health Tip: {tip}</div>;
 }
