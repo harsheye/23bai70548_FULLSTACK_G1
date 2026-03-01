@@ -12,6 +12,7 @@ const Login = () => {
     return (
         <>
         <h3>Login</h3>
+        <p>Please log in to continue.</p>
         <button onClick={handleLogin}>Login</button>
         </>
     )
