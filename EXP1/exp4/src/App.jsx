@@ -10,6 +10,7 @@ const DashboardSummary = lazy(() => import("./pages/DashboardSummary"));
 const DashboardSettings = lazy(() => import("./pages/DashboardSettings"));
 const DashboardAnalytics = lazy(() => import("./pages/DashboardAnalytics"));
 const Logs = lazy(() => import("./pages/Logs"));
+const WaterTracker = lazy(() => import("./pages/WaterTracker"));
 
 function App() {
   return (
@@ -37,6 +38,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <Logs />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dashboard/water"
+            element={
+              <ProtectedRoute>
+                <WaterTracker />
               </ProtectedRoute>
             }
           />
