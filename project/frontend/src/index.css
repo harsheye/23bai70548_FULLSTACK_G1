@@ -1,0 +1,55 @@
+html {
+  --bg-main: #0b1220;
+  --bg-panel: rgba(15, 23, 42, 0.86);
+  --bg-panel-strong: rgba(7, 12, 24, 0.92);
+  --bg-soft: rgba(30, 41, 59, 0.9);
+  --border-soft: rgba(148, 163, 184, 0.16);
+  --text-main: #e5eefc;
+  --text-muted: #93a4c2;
+  --text-strong: #f8fbff;
+  --accent-start: #2563eb;
+  --accent-end: #14b8a6;
+  --shadow-soft: 0 24px 60px rgba(2, 6, 23, 0.26);
+}
+
+html[data-theme='light'] {
+  --bg-main: #eef4fb;
+  --bg-panel: rgba(255, 255, 255, 0.92);
+  --bg-panel-strong: rgba(248, 250, 252, 0.96);
+  --bg-soft: rgba(226, 232, 240, 0.92);
+  --border-soft: rgba(148, 163, 184, 0.24);
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-strong: #0f172a;
+  --accent-start: #0f62fe;
+  --accent-end: #38bdf8;
+  --shadow-soft: 0 18px 40px rgba(148, 163, 184, 0.18);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}

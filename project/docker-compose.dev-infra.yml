@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: file-sharing-db-dev
+    environment:
+      POSTGRES_USER: ${DB_USER:-fileadmin}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-fileadmin123}
+      POSTGRES_DB: ${DB_NAME:-filesharingdb}
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+      - ./backend/scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-fileadmin} -d ${DB_NAME:-filesharingdb}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  minio:
+    image: minio/minio:latest
+    container_name: file-sharing-storage-dev
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin123}
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_dev_data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:9000/minio/health/live >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+
+volumes:
+  postgres_dev_data:
+  minio_dev_data:

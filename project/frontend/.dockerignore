@@ -1,0 +1,6 @@
+node_modules
+build
+npm-debug.log
+dev.out.log
+dev.err.log
+.env.development.local
