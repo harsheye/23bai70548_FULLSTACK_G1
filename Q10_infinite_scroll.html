@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body style="height: 2000px;" onscroll="check()">
+    <div id="feed">
+        <div>Post 1</div>
+    </div>
+    <div id="ldr" style="display:none">Loading...</div>
+    <script>
+        var   loading = false;
+        function check() {
+            if(loading) return;
+             if((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+                 loading = true;
+                 document.getElementById('ldr').style.display = 'block';
+                 setTimeout(function() {
+                     var d = document.createElement('div');
+                     d.innerText = 'New Post';
+                     document.getElementById('feed').appendChild(d);
+                     loading = false;
+                     document.getElementById('ldr').style.display = 'none';
+                 }, 1000);
+             }
+        }
+    </script>
+</body>
+</html>

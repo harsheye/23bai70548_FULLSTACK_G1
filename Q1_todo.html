@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="text" id="t"   >
+    <button onclick="add()">Add</button>
+    <ul id="l"></ul>
+    <script>
+        var   tasks   = [];
+        function add()  {
+            var v = document.getElementById('t').value;
+             tasks.push(v);
+            render();
+        }
+        function del(i) {
+             tasks.splice(i, 1);
+            render();
+        }
+        function render() {
+            var html = '';
+            for(var i=0; i<tasks.length; i++) {
+                html += '<li>' + tasks[i] + ' <button onclick="del('+i+')">X</button></li>';
+            }
+            document.getElementById('l').innerHTML = html;
+        }
+    </script>
+</body>
+</html>

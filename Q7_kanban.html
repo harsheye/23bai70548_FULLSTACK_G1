@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .col { float: left; width: 30%; min-height: 100px; border: 1px solid black; }
+    .card { background: #ccc; margin: 5px; padding: 5px; }
+</style>
+<body>
+    <div class="col" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="card" draggable="true" ondragstart="drag(event)" id="c1">Task 1</div>
+    </div>
+    <div class="col" id="prog" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <script>
+        var   draggedId;
+        function allowDrop(e) { e.preventDefault(); }
+        function drag(e) { draggedId = e.target.id; }
+        function drop(e) {
+            e.preventDefault();
+            var data = draggedId;
+            e.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</body>
+</html>

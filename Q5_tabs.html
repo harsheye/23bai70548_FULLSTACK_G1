@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .tab { display: none; }
+    .active { display: block; }
+</style>
+<body>
+    <button onclick="show(1)">T1</button>
+    <button onclick="show(2)">T2</button>
+    <div id="t1" class="tab active">C1</div>
+    <div id="t2" class="tab">C2</div>
+    <script>
+        var   t1 = document.getElementById('t1');
+        var t2 = document.getElementById('t2');
+        function show(n) {
+             t1.className = 'tab';
+             t2.className = 'tab';
+            if(n==1) t1.className = 'tab active';
+            if(n==2) t2.className = 'tab active';
+        }
+    </script>
+</body>
+</html>

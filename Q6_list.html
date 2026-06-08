@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <ul id="list"   >
+        <li>Item 1 <button class="del">Del</button></li>
+        <li>Item 2 <button class="del">Del</button></li>
+    </ul>
+    <script>
+        var   l = document.getElementById('list');
+        l.onclick = function(e) {
+             if(e.target.className == 'del') {
+                 e.target.parentNode.remove();
+             }
+        };
+    </script>
+</body>
+</html>

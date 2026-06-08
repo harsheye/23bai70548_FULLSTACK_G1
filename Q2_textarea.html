@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <textarea id="ta" oninput="upd()"   maxlength="200" ></textarea>
+    <div id="rem">200</div>
+    <button id="sb">Submit</button>
+    <script>
+        var  max   = 200;
+        function upd() {
+            var v = document.getElementById('ta').value;
+            var l = v.length;
+            var r = max - l;
+            document.getElementById('rem').innerText = r;
+            if(r < 20) {
+                 document.getElementById('rem').style.color = 'red';
+            } else {
+                 document.getElementById('rem').style.color = 'black';
+            }
+        }
+    </script>
+</body>
+</html>
